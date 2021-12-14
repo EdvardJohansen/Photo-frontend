@@ -1,12 +1,15 @@
 import React from "react";
+import logo from "../Images/logo.svg";
 import "../css/Results.css";
 
 const Results = () => {
   return (
-    <div className="result-page">
+    <div className="results-page">
       <div className="navbar">
-        <img src="./Images/logo.svg" alt="Website logo" className="logo" />
-        <h1>Shit</h1>
+        <img src={logo} alt="Website logo" className="logo" />
+      </div>
+      <div className="test">
+        <h1>Test</h1>
       </div>
     </div>
   );
