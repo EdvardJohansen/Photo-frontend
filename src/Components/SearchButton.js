@@ -1,5 +1,4 @@
 import React from "react";
-import Results from "../Pages/Results";
 import { Link } from "react-router-dom";
 import "../css/SearchButton.css";
 

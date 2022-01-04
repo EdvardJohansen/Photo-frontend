@@ -1,15 +1,22 @@
 import "./App.css";
-import reactDom from "react-dom";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React, { Pages } from "react";
+import logo from "./Images/logo.svg";
 import Landing from "./Pages/Landing.js";
-import Result from "./Pages/Results.js";
+import SearchBar from "./Components/SearchBar.js";
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 
 function App() {
   return (
-    <div className="App">
-      <Landing />
-    </div>
+    <MuiThemeProvider>
+      <div className="App">
+        <div className="navbar">
+          <img src={logo} alt="Website logo" className="logo" />
+        </div>
+        <div className="photoSearch">
+          <Landing />
+          <SearchBar />
+        </div>
+      </div>
+    </MuiThemeProvider>
   );
 }
 

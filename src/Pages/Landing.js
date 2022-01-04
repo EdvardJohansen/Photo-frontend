@@ -1,21 +1,46 @@
-import React from "react";
-import SearchButton from "../Components/SearchButton";
-import SearchBar from "../Components/SearchBar";
-import logo from "../Images/logo.svg"
+import React, { Component } from "react";
 import "../css/Landing.css";
+import SearchBar from "../Components/SearchBar";
+import PropTypes from "prop-types";
+import { GridList, GridTile } from "material-ui/GridList";
+import IconButton from "material-ui/IconButton";
+import ZoomIn from "material-ui/svg-icons/action/zoom-in";
+// import Dialog from "material-ui/Dialog";
+// import FlatButton from "material-ui/FlatButton";
 
-const Landing = () => {
-  return (
-    <div className="landing-page">
-      <div className="navbar">
-        <img src={logo} alt="Website logo" className="logo"/>
+class Landing extends Component {
+  render() {
+    let imageList;
+    const { images } = this.props;
+    if (images) {
+      imageList = (
+        <GridList cols={4}>
+          {images.map((img) => (
+            <GridTile
+              title={img.tags}
+              key={img.id}
+              actionIcon={
+                <IconButton>
+                  <ZoomIn color="white" />
+                </IconButton>
+              }
+            >
+              <img src={img.largeImageURL} alt="Results" />
+            </GridTile>
+          ))}
+        </GridList>
+      );
+    }
+    return (
+      <div className="imageResults">
+        {imageList}
       </div>
-      <div className="photoSearch">
-        <SearchBar />
-        <SearchButton />
-      </div>
-    </div>
-  );
+    );
+  }
+}
+
+Landing.propTypes = {
+  images: PropTypes.array.isRequired,
 };
 
 export default Landing;
