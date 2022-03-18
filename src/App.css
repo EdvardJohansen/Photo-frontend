@@ -6,7 +6,14 @@
   display: block;
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(to left top, #8b0000, #ab1356, #a14fa3, #6f81d8, #12a9eb);
+  background-image: linear-gradient(
+    to left top,
+    #8b0000,
+    #ab1356,
+    #a14fa3,
+    #6f81d8,
+    #12a9eb
+  );
 }
 
 .logo {

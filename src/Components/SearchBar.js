@@ -11,6 +11,7 @@ const SearchBar = () => {
 
   useEffect(() => {}, [images]);
 
+  //Retrieves the images from the Pixabay API
   const getImages = () => {
     axios
       .get(

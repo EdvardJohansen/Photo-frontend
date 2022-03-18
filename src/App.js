@@ -1,12 +1,11 @@
 import React from "react";
 import "./App.css";
-import logo from "./Images/logo.svg";
 import SearchBar from "./Components/SearchBar.js";
 
+//Adds the search bar to the navbar
 function App() {
   return (
     <div>
-      {/* <img src={logo} alt="Website logo" className="logo" /> */}
       <div className="navbar">
         <SearchBar />
       </div>
