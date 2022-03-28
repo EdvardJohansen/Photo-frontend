@@ -15,25 +15,3 @@
     #12a9eb
   );
 }
-
-.logo {
-  display: flex;
-  align-items: center;
-  width: 150px;
-  height: 150px;
-  margin-bottom: -150px;
-}
-
-@media (min-width: 376px) {
-  .navbar {
-    width: 1047px;
-    height: 787px;
-  }
-}
-
-@media (min-width: 801px) {
-  .navbar {
-    width: 100%;
-    height: 100vh;
-  }
-}

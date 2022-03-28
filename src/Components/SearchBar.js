@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import "../css/SearchBar.css";
 import axios from "axios";
-import Landing from "../Components/Landing";
+import SearchButton from "./SearchButton";
 
 const SearchBar = () => {
   const [searchText, setSearchText] = useState("");
@@ -9,7 +10,20 @@ const SearchBar = () => {
   const API_URL = "https://pixabay.com/api";
   const API_KEY = "17241914-90da7b93c0ccceb734849dcd1";
 
-  useEffect(() => {}, [images]);
+  let navigate = useNavigate();
+  const resultsUpdate = useRef(true);
+
+  useEffect(() => {
+    if (resultsUpdate.current) {
+      resultsUpdate.current = false;
+    } else {
+      navigate("/results", {
+        state: {
+          images: images,
+        },
+      });
+    }
+  }, [images, navigate]);
 
   //Retrieves the images from the Pixabay API
   const getImages = () => {
@@ -31,20 +45,16 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="interface-container">
-      <div className="logo-container">
-        <h1>SHOTO</h1>
+    <div>
+      <div className="searchbar-container">
+        <input
+          className="input-search"
+          type="text"
+          onChange={(e) => setSearchText(e.target.value)}
+          placeholder="Search for anything"
+        />
       </div>
-      <p>“Browse from our extensive database of photos”</p>
-      <input
-        type="text"
-        onChange={(e) => setSearchText(e.target.value)}
-        placeholder="Search for anything"
-      />
-      <button onClick={() => getImages()} className="btn-search">
-        Go
-      </button>
-      {images && <Landing images={images} />}
+      <SearchButton images={images} getImages={getImages} />
     </div>
   );
 };

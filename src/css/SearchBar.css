@@ -1,65 +1,18 @@
-h1 {
-  color: white;
-  font-size: 38px;
-  letter-spacing: 12px;
-  margin: 40px 0px 0px 30px;
+.searchbar-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
 }
 
-p {
-  color: white;
-  width: 220px;
-  text-align: center;
-  font-size: 16px;
-  letter-spacing: 4px;
-  font-weight: 800;
-  margin: 40px 0px 0px 80px;
-}
-
-input {
-  text-align: left;
-  width: 250px;
-  height: 30px;
-  margin: 20% 0% 0% 15%;
-  border-radius: 4px;
+.input-search {
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 0.2rem;
   border: solid 1px #000;
 }
 
-.logo-container {
-  padding: 20px 75px;
-}
-
-.btn-search {
-  display: flex;
-  color: black;
-  padding: 6px 10px;
-  margin: -34px 0% 0% 72%;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 15px;
-  font-family: inherit;
-  border: none;
-  border-radius: 15px;
-}
-
-@media (min-width: 376px) {
-  h1 {
-    color: white;
-    letter-spacing: 12px;
-    font-size: 52px;
-    margin: 50px 0px 0px 360px;
-  }
-
-  p {
-    color: white;
-    text-align: center;
-    font-weight: 800;
-    width: 400px;
-    font-size: 20px;
-    margin: 80px 0px 0px 330px;
-    letter-spacing: 4px;
-  }
-
-  input {
+/* @media (min-width: 375px) and (max-width: 800px) {
+  .input-search {
     text-align: left;
     width: 400px;
     height: 30px;
@@ -82,25 +35,8 @@ input {
   }
 }
 
-@media (min-width: 801px) {
-  h1 {
-    color: white;
-    letter-spacing: 12px;
-    font-size: 54px;
-    margin: 50px 0px 0px 560px;
-  }
-
-  p {
-    color: white;
-    text-align: center;
-    font-weight: 600;
-    width: 660px;
-    font-size: 20px;
-    margin: 80px 0px 0px 420px;
-    letter-spacing: 4px;
-  }
-
-  input {
+@media (min-width: 801px) and (max-width: 1440px) {
+  .input-search {
     text-align: left;
     width: 660px;
     height: 30px;
@@ -121,4 +57,4 @@ input {
     border: none;
     border-radius: 15px;
   }
-}
+} */

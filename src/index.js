@@ -1,10 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import Results from "./Pages/Results";
+import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Results from "./Components/Results";
 
 ReactDOM.render(
   <React.StrictMode>

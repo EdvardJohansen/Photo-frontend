@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
-import SearchBar from "./Components/SearchBar.js";
+import Landing from "./Pages/Landing.js";
 
-//Adds the search bar to the navbar
+// Adds the search bar to the navbar
 function App() {
   return (
     <div>
       <div className="navbar">
-        <SearchBar />
+        <Landing />
       </div>
     </div>
   );

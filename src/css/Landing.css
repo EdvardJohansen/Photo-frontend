@@ -1,0 +1,38 @@
+.landing-container {
+    display: block;
+    text-align: center;
+    margin: 0 3rem;
+}
+
+.logo {
+  color: white;
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  margin: 0;
+  font-size: 38px;
+  letter-spacing: 0.1rem;
+}
+
+.landing-subtitle {
+  color: white;
+  font-size: 16px;
+  letter-spacing: 4px;
+  font-weight: 800;
+}
+
+@media (min-width: 800px) and (max-width: 1440px) {
+  .logo {
+    font-size: 48px;
+  }
+  .landing-subtitle {
+    font-size: 20px;
+  }  
+}
+
+@media (min-width: 1441px) and (max-width: 1980px) {
+  .logo {
+    font-size: 62px;
+  }
+  .landing-subtitle {
+    font-size: 24px;
+  }  
+}

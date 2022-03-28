@@ -1,13 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../css/SearchButton.css";
 
-const SearchButton = () => {
+const SearchButton = ({ images, getImages }) => {
+
   return (
-    <div className="btnSearch">
-      <Link to="/results">
-        <button>Search</button>
-      </Link>
+    <div className="search-button-container">
+      <button onClick={() => getImages()} className="button-search">
+        Search
+      </button>
     </div>
   );
 };
