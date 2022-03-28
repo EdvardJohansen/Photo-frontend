@@ -1,5 +1,0 @@
-how to pass in images as a prop when u use navigate to route a new page
-redux
-
-find a way to see if I can change the name of state
-to make it more readable
