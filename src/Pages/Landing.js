@@ -9,7 +9,9 @@ const Landing = () => {
       <div className="logo-container">
         <h1 className="logo">SHOTO</h1>
       </div>
-      <p className="landing-subtitle">Browse from our extensive database of photos</p>
+      <p className="landing-subtitle">
+        Browse from our extensive database of photos
+      </p>
       <SearchBar />
     </div>
   );
