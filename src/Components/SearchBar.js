@@ -45,8 +45,8 @@ const SearchBar = () => {
   };
 
   return (
-    <div>
-      <div className="searchbar-container">
+    <div className="searchbar-container">
+      <div className="input-search-container">
         <input
           className="input-search"
           type="text"

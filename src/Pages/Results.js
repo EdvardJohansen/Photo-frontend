@@ -12,14 +12,12 @@ const Results = () => {
   });
 
   return (
-    <div>
-      <div className="results-navbar">
-        <Landing />
-        <div className="image-list-container">
-          {state.images.map((image) => (
-            <img src={image.previewURL} alt="results" />
-          ))}
-        </div>
+    <div className="results-navbar">
+      <SearchBar />
+      <div className="image-list-container">
+        {state.images.map((image) => (
+          <img src={image.webformatURL} alt="results" />
+        ))}
       </div>
     </div>
   );

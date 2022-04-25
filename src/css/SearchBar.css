@@ -1,4 +1,9 @@
 .searchbar-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.input-search-container {
   display: flex;
   flex-wrap: wrap;
   margin-top: 3rem;
@@ -9,4 +14,10 @@
   width: 100%;
   border-radius: 0.2rem;
   border: solid 1px #000;
+}
+
+@media (min-width: 500px) {
+  .searchbar-container {
+    width: 28.75rem;
+  }
 }
